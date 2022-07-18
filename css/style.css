@@ -44,14 +44,16 @@ body {
 /*header*/
 
 .header-content{
-   
     padding-top: 24px;
     padding-bottom: 25px;
+    border-bottom: 1px solid;
+    border-color:#ECECEC;
+}
+
+.flexbox{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid;
-    border-color:#ECECEC;
     
 }
 
@@ -252,10 +254,6 @@ li > .spacial-heading {
 
 
 /*portfolio-nav-menu*/
-
-.list-button, .portfolio-class{
-    margin-bottom: 64px;
-}
  
 .buttons{
      display: flex;
