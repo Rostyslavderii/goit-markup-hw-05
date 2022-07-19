@@ -53,7 +53,7 @@ body {
 .flexbox{
     display: flex;
     align-items: center;
-    
+    justify-content: space-between;
     
 }
 
@@ -139,15 +139,31 @@ li > .link-active, .header-menu a:hover, .header-menu a:focus{
     color: var(--accent-color);
 }
 
+.container .header-contacts{
+    margin-left:auto;
+   
+}
 
 
 /*main*/
 
 /*banner*/
+
 .banner {
     padding-top: 200px;    
     padding-bottom: 200px;
+    min-height: 600px;
+    /* max-width: 1600px;  !!! */
+    
+    margin-left: auto;
+    margin-right: auto;
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/image20.jpg);
     background-color: var(--dark-bg-color);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -155,10 +171,7 @@ li > .link-active, .header-menu a:hover, .header-menu a:focus{
 
 }
 
-.container .header-contacts{
-    margin-left:auto;
-   
-}
+/* banner-text */
 
 .banner h1{
     color: #FFFFFF;
@@ -224,11 +237,27 @@ li > .link-active, .header-menu a:hover, .header-menu a:focus{
 .spacials ul{
     display: flex;
     justify-content: space-between;
+
 }
     
 .spacial {
     width: 270px;
     font-size: 14px;
+}
+
+.spacial:not(:last-child) {
+    margin-right: 30px;
+}
+
+.thumb {
+    margin-bottom: 30px;
+    padding: 25px 100px;
+    background-color: var(--medium-bg-color);
+    border-radius: 4px;
+}
+
+.spacials{
+    padding-bottom: 0px;
 }
 
 li > .spacial-heading {
@@ -292,6 +321,7 @@ transition: all 0.3s ease;
     background-color: var(--accent-color);
   color: var(--main-bg-color);
 }
+
 /*portfolio-img-list*/
 
 .portfolio-photo {
@@ -300,33 +330,60 @@ transition: all 0.3s ease;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-  
-.portfolio-team {
+ 
+.portfolio-team:not(:nth-child(3n)) {
+    margin-right: 30px;
+}
+
+.portfolio-team:not(:nth-last-child(-n + 3)) {
     margin-bottom: 30px;
 }
-  
-.portfolio-item {
-    transition: all 0.3s ease;
+
+/* border-lists */
+.project-info{
+
+    border-left: 1px solid #ECECEC;
+    border-right: 1px solid #ECECEC;
+    border-bottom: 1px solid #ECECEC;
 }
   
-.portfolio-item:hover {
+.portfolio-team {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+  
+.portfolio-team:hover {
     transform: scale(1.05);
+    background: #ffffff;
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%), 1px 4px 6px rgb(0 0 0 / 16%);
+}
+
+
+.portfolio-item{
+    display: block;
 }
   
 .team-heading {
-    margin: 20px 24px 4px 24px;
     letter-spacing: 0.06em;
     line-height: 2;
     font-size: 18px;
     font-weight: 700;
     color: var(--header-color);
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
   
 .team-text {
     margin: 0 24px;
+    margin-bottom: 20px;
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
+}
+
+.team-member {
+    padding: 30px 32px;
 }
 
 
@@ -350,10 +407,10 @@ transition: all 0.3s ease;
 }
 
 .main-team {
-background-color: var(--medium-bg-color);
-display: flex;
-flex-direction: column;
-align-items: center;
+    background-color: var(--medium-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .photo, 
@@ -395,11 +452,15 @@ align-items: center;
    margin-right: auto;
 }
 
+.team {
+    display: block;
+    width: 100%;
+}
+
 .team-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 30px;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
@@ -412,7 +473,6 @@ align-items: center;
 }
 
 .team-item-header{
-    margin-top: 30px;
     font-weight: 500;
     font-style: 16px;
     letter-spacing: 0.03em;
@@ -427,7 +487,12 @@ align-items: center;
     letter-spacing: 00.03em;
     line-height: inherit;
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
 
+.team-item:not(:last-child) {
+    margin-right: 30px;
 }
 
 .team-social-list {
@@ -473,7 +538,7 @@ align-items: center;
     font-weight: 700;
     letter-spacing: 0.03em;
     text-decoration: none;
-
+    margin-bottom: 20px;
 }
 
 .logo > span {
@@ -486,7 +551,7 @@ align-items: center;
     padding-bottom: 60px;
 }
 
-.adress-item, .icon {
+.adress-item {
     margin-bottom: 9px;
 }
 
@@ -515,7 +580,10 @@ color: var(--accent-color);
     text-decoration: none;
 }
 
-/* footer-networks */
+.footer-list {
+    display: flex;
+    align-items: center;
+}
 
 .network-container {
     margin-left: 85px;
@@ -523,19 +591,72 @@ color: var(--accent-color);
     align-self: flex-start;
 }
 
-.call-of-action{
-
+.call-of-action {
+    margin-top: 0;
     margin-bottom: 20px;
     color: var(--main-bg-color);
     font-weight: 700;
+    font-size: inherit;
     line-height: 1.14;
     text-transform: uppercase;
 }
 
-
-
-.icon {
+.icon{
+    fill: currentColor;
     display: block;
     align-self: center;
-}  
+}
 
+.header-contacts .icon {
+ margin-right: 10px;
+}
+
+.header-email-contact, .header-phone {
+    display: flex;
+}
+
+.main-team .social-network {
+    color: var(--team-social-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-list .social-network {
+    color: var(--main-bg-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-network:hover, .social-network:focus {
+    background-color: var(--accent-color);
+    color: var(--main-bg-color);
+}
+
+.social-network {
+    display: block;
+    padding: 12px;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+}
+
+.network:not(:last-child) {
+    margin-right: 10px;
+}
+
+.clients-link {
+    display: block;
+    padding: 16px 32px;
+    height: 92px;
+    width: 170px;
+    color: var(--team-social-color);
+    border: 1px solid var(--team-social-color);
+    border-radius: 4px;
+}
+
+.clients-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.clients-link:hover, .clients-link:focus {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
