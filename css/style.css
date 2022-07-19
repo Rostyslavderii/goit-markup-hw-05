@@ -53,7 +53,7 @@ body {
 .flexbox{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    
     
 }
 
@@ -486,7 +486,7 @@ align-items: center;
     padding-bottom: 60px;
 }
 
-.adress-item {
+.adress-item, .icon {
     margin-bottom: 9px;
 }
 
@@ -515,4 +515,27 @@ color: var(--accent-color);
     text-decoration: none;
 }
 
+/* footer-networks */
+
+.network-container {
+    margin-left: 85px;
+    padding-top: 12px;
+    align-self: flex-start;
+}
+
+.call-of-action{
+
+    margin-bottom: 20px;
+    color: var(--main-bg-color);
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+
+
+.icon {
+    display: block;
+    align-self: center;
+}  
 
