@@ -105,8 +105,62 @@ ol, ul {
     list-style: none;
 }
 
-li > .link-active, .header-menu a:hover, .header-menu a:focus{
+
+
+.link-active--marker{
+    position: relative;
+    padding-bottom: 25px;
+    /* transform: scale(2);
+    transition-property: background-color, color;
+    transition-duration: 300ms;
+    transition-timing-function:cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+
+}
+
+
+li > .link-active, .link:hover, .header-menu a:focus{
     color: var(--accent-color);
+    transform: scale(1);
+    
+}
+
+.link {
+    transition-property: background-color, color;
+    transition-duration: 300ms;
+    transition-timing-function:cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 4px;
+    bottom: -1px;
+    width: 100%;
+    background-color: var(--accent-color);
+    transform: scale(1);
+    transition-property: background-color, color;
+    transition-duration: 300ms;
+    transition-timing-function:cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    
+    border-radius: 2px
+    
+}
+
+.link-active::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 4px;
+    bottom: -1px;
+    width: 100%;
+    background-color: var(--accent-color);
+    transform: scale(1);
+    transition-property: background-color, color;
+    transition-duration: 300ms;
+    transition-timing-function:cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    
+    border-radius: 2px
 }
 
 
