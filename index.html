@@ -21,8 +21,8 @@
                 <a class="header-logo" href="./index.html"><span>Web</span>Studio</a>
                 <ul class="header-menu">
                     <li><a class="link-active link-active--marker" href="./index.html">Студия</a></li>
-                    <li><a class="link link-active--marker" href="./portfolio.html">Портфолио</a></li>
-                    <li><a class="link link-active--marker" href="/">Контакты</a></li>
+                    <li><a class="link " href="./portfolio.html">Портфолио</a></li>
+                    <li><a class="link " href="/">Контакты</a></li>
                 </ul>
             </nav>
             <ul class="header-contacts">
@@ -45,7 +45,7 @@
         <!--banner-->
         <section class="banner">
                 <h1>Эффективные решения для вашего бизнеса</h1>
-                <button class="button" type="button">Заказать услугу </button> 
+                <button class="button" type="button" data-modal-open >Заказать услугу </button>
         </section>
         <!--spacial-->
         <section class="spacials container section">
@@ -91,13 +91,22 @@
             <h2 class="main-header">Чем мы занимаемся</h2>
             <ul class="photo">
                 <li class="photo-item">
-                    <img class="thing" src="./images/image2.jpg" width="370" height="294" alt="Фотография Десктопные приложения">
+                  <div class=" thing">
+                    <img class="" src="./images/image2.jpg" width="370" height="294" alt="Фотография Десктопные приложения">
+                    <h3 class="main__text-title">Десктопные приложения</h3>
+                  </div>
                 </li>
                 <li class="photo-item">
-                    <img class="thing" src="./images/image3.jpg" width="370" height="294" alt="Фотография Мобильние приложения">
+                  <div class="thing">
+                    <img class="" src="./images/image3.jpg" width="370" height="294" alt="Фотография Мобильние приложения">
+                      <h3 class="main__text-title">Мобильные приложения</h3>
+                  </div>
                 </li>
                 <li class="photo-item">
-                    <img class="thing" src="./images/image4.jpg" width="370" height="294"  alt="Фотография Дизайнерские решения">
+                  <div class=" thing">
+                      <img class="" src="./images/image4.jpg" width="370" height="294"  alt="Фотография Дизайнерские решения">
+                    <h3 class="main__text-title">Дизайнерские решения</h3>
+                  </div>
                 </li>
             </ul>
 
@@ -359,7 +368,19 @@
             </div>
         </div>
     </footer>
+    <!-- Modal window -->
+    <div class="backdrop" data-modal="">
+      <div class="modal">
+        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+        <button id="seven" class="modal__button" data-modal-close="">
+          <svg class="modal__icon" width="18" height="18">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     </main>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
 
