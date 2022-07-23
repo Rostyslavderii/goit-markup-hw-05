@@ -482,7 +482,7 @@ transition: all 0.3s ease;
 
 .modal-button:hover {
     background: var(--accent-color);
-    fill: var(--main-bg-color;
+    fill: var(--main-bg-color);
 }
 
 .modal-title {
